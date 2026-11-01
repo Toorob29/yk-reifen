@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="de" data-accent="orange">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#111318" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="YK Reifen" />
+  <title>YK Reifen &amp; Felgen Pro – Lager &amp; Angebote</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       AUTOMOTIVE VECTOR ICONS (REIFENPROFIL, SPORTFELGE, MONTAGE, LAGER)
+       ======================================================================== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- Reifenprofil Icon -->
+    <symbol id="icon-tire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="5" y="2" width="14" height="20" rx="4" />
+      <path d="M9 2v20M15 2v20" stroke-opacity="0.45" />
+      <path d="M5 6h4M15 6h4M5 10h4M15 10h4M5 14h4M15 14h4M5 18h4M15 18h4" />
+      <path d="M9 8l3-2 3 2M9 13l3-2 3 2M9 18l3-2 3 2" />
+    </symbol>
+
+    <!-- Sportfelge Icon -->
+    <symbol id="icon-rim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="3" />
+      <path d="M12 2v7M12 15v7M2 12h7M15 12h7M4.93 4.93l4.95 4.95M14.12 14.12l4.95 4.95M19.07 4.93l-4.95 4.95M9.88 14.12l-4.95 4.95" />
+    </symbol>
+
+    <!-- Komplettrad Icon -->
+    <symbol id="icon-wheel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10" stroke-width="2.5" stroke-dasharray="3 1.5" />
+      <circle cx="12" cy="12" r="6.5" />
+      <circle cx="12" cy="12" r="2" />
+      <path d="M12 5.5v4.5M12 14v4.5M5.5 12H10M14 12h4.5" />
+    </symbol>
+
+    <!-- Montage / Zahnrad & Schraubenschlüssel Icon -->
+    <symbol id="icon-wrench-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+    </symbol>
+
+    <!-- Angebot / Dokument Icon -->
+    <symbol id="icon-quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+      <polyline points="14 2 14 8 20 8" />
+      <line x1="8" y1="13" x2="16" y2="13" />
+      <line x1="8" y1="17" x2="13" y2="17" />
+    </symbol>
+
+    <!-- Kunden Icon -->
+    <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+    </symbol>
+
+    <!-- Lagerort / Halle & Regal Icon -->
+    <symbol id="icon-warehouse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 21V8l9-5 9 5v13" />
+      <path d="M7 21v-8h10v8" />
+      <path d="M7 17h10" />
+    </symbol>
+
+    <!-- Weitere Icons -->
+    <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </symbol>
+    <symbol id="icon-print" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 6 2 18 2 18 9" />
+      <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+      <rect x="6" y="14" width="12" height="8" />
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+      <line x1="7" y1="7" x2="7.01" y2="7" />
+    </symbol>
+    <symbol id="icon-edit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+    </symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="3 6 5 6 21 6" />
+      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+    </symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+    </symbol>
+  </svg>
+
+  <!-- ========================================================================
+       APP HEADER MIT YK-FIRMENLOGO & SCHNELLAKTIONEN
+       ======================================================================== -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand-block" onclick="app.switchTab('inventory')">
+        <div class="brand-logo-wrap">
+          <img id="headerLogoImg" src="assets/logo.jpg" alt="YK Firmenlogo" />
+        </div>
+        <div class="brand-titles">
+          <h1>
+            <span id="headerCompanyName">YK Reifen &amp; Felgen</span>
+            <span class="brand-badge">PRO</span>
+          </h1>
+          <div class="brand-subtitle" style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span>Lagerbestand · Felgen · Angebote</span>
+            <span id="autoSaveBadge" style="color:var(--status-ok); font-weight:700; font-size:0.7rem;">✓ Automatisch gespeichert</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn btn-secondary btn-sm" onclick="app.openQuoteModal()" title="Neues Angebot erstellen">
+          <svg><use href="#icon-quote"></use></svg>
+          <span>+ Angebot</span>
+        </button>
+        <button class="btn btn-primary btn-sm" onclick="app.openItemModal()" title="Neuen Reifen/Felge anlegen">
+          <svg><use href="#icon-plus"></use></svg>
+          <span>+ Bestand</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HAUPTBEREICH (5 TABS)
+       ======================================================================== -->
+  <main class="app-main">
+
+    <!-- ======================================================================
+         TAB 1: LAGERBESTAND (REIFEN, FELGEN, KOMPLETTRÄDER)
+         ====================================================================== -->
+    <section id="view-inventory" class="view-section active">
+
+      <!-- KPI-Leiste -->
+      <div class="kpi-strip">
+        <div class="kpi-mini" onclick="app.setCategoryFilter('all')">
+          <span class="kpi-mini-label"><svg width="14" height="14"><use href="#icon-wheel"></use></svg> Gesamt Räder/Teile</span>
+          <span class="kpi-mini-val" id="kpiTotalQty">0</span>
+        </div>
+        <div class="kpi-mini" onclick="app.setCategoryFilter('tire')">
+          <span class="kpi-mini-label"><svg width="14" height="14"><use href="#icon-tire"></use></svg> Reifen Posten</span>
+          <span class="kpi-mini-val" id="kpiTireCount">0</span>
+        </div>
+        <div class="kpi-mini" onclick="app.setCategoryFilter('rim')">
+          <span class="kpi-mini-label"><svg width="14" height="14"><use href="#icon-rim"></use></svg> Felgen &amp; Kompletträder</span>
+          <span class="kpi-mini-val" id="kpiRimWheelCount">0</span>
+        </div>
+        <div class="kpi-mini warn" onclick="app.toggleWarnFilter()">
+          <span class="kpi-mini-label">⚠️ Prüfhinweise</span>
+          <span class="kpi-mini-val" id="kpiWarnCount">0</span>
+        </div>
+      </div>
+
+      <!-- Such- & Filter-Cockpit -->
+      <div class="cockpit-bar">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg><use href="#icon-search"></use></svg>
+            <input
+              type="search"
+              id="invSearchInput"
+              class="search-input"
+              placeholder="Suche: z.B. 225/45 R18, 2254518, 5x112, ET35, DOT, Marke, KBA, Regal…"
+              oninput="app.onSearchInput(this.value)"
+            />
+            <button id="searchClearBtn" class="search-clear-btn" onclick="app.clearSearch()" title="Suche löschen">✕</button>
+          </div>
+          <button class="btn btn-primary" onclick="app.openItemModal()">
+            <svg><use href="#icon-plus"></use></svg>
+            <span>Neu anlegen</span>
+          </button>
+        </div>
+
+        <!-- Hauptkategorie-Chips -->
+        <div class="filter-scroll" id="categoryFilterRow">
+          <button class="chip active" data-cat="all" onclick="app.setCategoryFilter('all')">Alle Posten</button>
+          <button class="chip" data-cat="tire" onclick="app.setCategoryFilter('tire')">
+            <svg><use href="#icon-tire"></use></svg> Reifen
+          </button>
+          <button class="chip" data-cat="rim" onclick="app.setCategoryFilter('rim')">
+            <svg><use href="#icon-rim"></use></svg> Felgen
+          </button>
+          <button class="chip" data-cat="wheel" onclick="app.setCategoryFilter('wheel')">
+            <svg><use href="#icon-wheel"></use></svg> Kompletträder
+          </button>
+          <button class="chip" data-cat="accessory" onclick="app.setCategoryFilter('accessory')">
+            <svg><use href="#icon-wrench-gear"></use></svg> Zubehör / RDKS
+          </button>
+        </div>
+
+        <!-- Detail-Filter (Saison, Zollgröße, Lochkreis, Lagerort, Warnungen, Sortierung) -->
+        <div class="subfilter-row">
+          <select id="filterSeason" class="subfilter-select" onchange="app.renderInventory()">
+            <option value="all">Saison: Alle</option>
+            <option value="summer">☀️ Sommerreifen</option>
+            <option value="winter">❄️ Winterreifen</option>
+            <option value="allseason">🌦️ Allwetterreifen</option>
+          </select>
+
+          <select id="filterDiameter" class="subfilter-select" onchange="app.renderInventory()">
+            <option value="all">Zollgröße: Alle</option>
+          </select>
+
+          <select id="filterPcd" class="subfilter-select" onchange="app.renderInventory()">
+            <option value="all">Lochkreis: Alle</option>
+          </select>
+
+          <select id="filterHall" class="subfilter-select" onchange="app.renderInventory()">
+            <option value="all">Lagerort: Alle</option>
+          </select>
+
+          <select id="filterWarning" class="subfilter-select" onchange="app.renderInventory()">
+            <option value="all">Status: Alle</option>
+            <option value="any_warn">⚠️ Alle Warnungen (Profil / DOT / Bestand)</option>
+            <option value="low_tread">🔻 Profiltiefe &lt; 4,0 mm</option>
+            <option value="old_dot">⏳ DOT älter als 6 Jahre</option>
+            <option value="low_stock">📦 Unter Mindestbestand</option>
+          </select>
+
+          <select id="sortOrder" class="subfilter-select" onchange="app.renderInventory()">
+            <option value="updated_desc">Sortierung: Zuletzt geändert</option>
+            <option value="size_asc">Größe / Breite aufsteigend</option>
+            <option value="inch_asc">Zollgröße aufsteigend</option>
+            <option value="qty_desc">Bestand (Menge hoch → niedrig)</option>
+            <option value="price_asc">Preis aufsteigend</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Liste der Bestandskarten -->
+      <div id="inventoryGrid" class="inventory-grid"></div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 2: ANGEBOTE & AUFTRÄGE (INKL. MONTAGE, ENTSORGUNG, EINLAGERUNG)
+         ====================================================================== -->
+    <section id="view-quotes" class="view-section">
+      <div class="section-header-bar">
+        <div>
+          <h2>📄 Angebote &amp; Aufträge</h2>
+          <p class="brand-subtitle">Erstelle Angebote mit Reifen/Felgen aus dem Bestand + Montage, Auswuchten, Entsorgung &amp; Einlagerung</p>
+        </div>
+        <button class="btn btn-primary" onclick="app.openQuoteModal()">
+          <svg><use href="#icon-plus"></use></svg>
+          <span>Neues Angebot</span>
+        </button>
+      </div>
+
+      <div class="filter-scroll" style="margin-bottom: 14px;" id="quoteStatusFilterRow">
+        <button class="chip active" data-qstatus="all" onclick="app.setQuoteStatusFilter('all')">Alle Dokumente</button>
+        <button class="chip" data-qstatus="draft" onclick="app.setQuoteStatusFilter('draft')">📝 Entwurf</button>
+        <button class="chip" data-qstatus="open" onclick="app.setQuoteStatusFilter('open')">📨 Offen / Versendet</button>
+        <button class="chip" data-qstatus="accepted" onclick="app.setQuoteStatusFilter('accepted')">✅ Angenommen</button>
+        <button class="chip" data-qstatus="rejected" onclick="app.setQuoteStatusFilter('rejected')">❌ Abgelehnt</button>
+      </div>
+
+      <div id="quotesListContainer"></div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 3: KUNDENSTAMMDATEN & FAHRZEUGE
+         ====================================================================== -->
+    <section id="view-customers" class="view-section">
+      <div class="section-header-bar">
+        <div>
+          <h2>👥 Kundenstammdaten &amp; Fahrzeuge</h2>
+          <p class="brand-subtitle">Privat- &amp; Geschäftskunden inkl. Kennzeichen, Fahrzeugen und Angebotshistorie</p>
+        </div>
+        <button class="btn btn-primary" onclick="app.openCustomerModal()">
+          <svg><use href="#icon-plus"></use></svg>
+          <span>Neuer Kunde</span>
+        </button>
+      </div>
+
+      <div class="cockpit-bar" style="margin-bottom: 16px;">
+        <div class="search-input-wrap">
+          <svg><use href="#icon-search"></use></svg>
+          <input
+            type="search"
+            id="customerSearchInput"
+            class="search-input"
+            placeholder="Kunde suchen nach Name, Firma, Kunden-Nr., Telefon oder Kennzeichen (z.B. M-MS 330)…"
+            oninput="app.renderCustomers()"
+          />
+        </div>
+      </div>
+
+      <div id="customersListContainer" class="inventory-grid"></div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 4: LAGERORTE, STATISTIK & WARN-CENTER
+         ====================================================================== -->
+    <section id="view-locations" class="view-section">
+      <div class="section-header-bar">
+        <div>
+          <h2>🗄️ Lagerorte, Statistik &amp; Prüfhinweise</h2>
+          <p class="brand-subtitle">Übersicht nach Halle / Regal / Fach, Gesamtlagerwert sowie DOT- &amp; Profiltiefen-Überwachung</p>
+        </div>
+        <button class="btn btn-secondary" onclick="app.exportInventoryCSV()">
+          📊 Bestandsliste als CSV/Excel
+        </button>
+      </div>
+
+      <!-- Finanz- & Bestands-Kennzahlen -->
+      <div class="kpi-strip" id="dashboardKpiStrip" style="margin-bottom: 18px;"></div>
+
+      <!-- Warn-Center -->
+      <div class="form-section" style="margin-bottom: 18px;">
+        <div class="form-section-title">
+          <span>⚠️ Warn-Center (Profiltiefe &lt; 4mm · DOT ≥ 6 Jahre · Mindestbestand)</span>
+        </div>
+        <div id="warningsListContainer"></div>
+      </div>
+
+      <!-- Gruppierte Lagerort-Übersicht -->
+      <div class="form-section" style="margin-bottom: 18px;">
+        <div class="form-section-title">
+          <span>📍 Belegung nach Lagerort (Halle → Regal → Fach)</span>
+        </div>
+        <div id="locationsTreeContainer"></div>
+      </div>
+
+      <!-- Bestands-Logbuch -->
+      <div class="form-section">
+        <div class="form-section-title">
+          <span>🕒 Letzte Lagerbewegungen (Ein-/Ausbuchungen)</span>
+        </div>
+        <div id="historyListContainer"></div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TAB 5: FIRMA (YK-LOGO), DIENSTLEISTUNGEN & BACKUP
+         ====================================================================== -->
+    <section id="view-settings" class="view-section">
+      <div class="section-header-bar">
+        <div>
+          <h2>⚙️ Firmendaten, Dienstleistungskatalog &amp; Backup</h2>
+          <p class="brand-subtitle">Hinterlege deine Firmendaten mit YK-Logo, passe Montage-/Einlagerungspreise an und sichere deine Daten</p>
+        </div>
+      </div>
+
+      <!-- Design & Akzentfarbe Umschalter -->
+      <div class="form-section" style="margin-bottom: 18px;">
+        <div class="form-section-title">
+          <span>🎨 Automotive Design &amp; Akzentfarbe</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <button class="btn btn-secondary" onclick="app.setAccentTheme('orange')">
+            <span style="width:14px;height:14px;border-radius:50%;background:#FF6B00;display:inline-block;"></span>
+            Sportliches Orange (#FF6B00)
+          </button>
+          <button class="btn btn-secondary" onclick="app.setAccentTheme('gold')">
+            <span style="width:14px;height:14px;border-radius:50%;background:#D4AF37;display:inline-block;"></span>
+            YK Metallic-Gold (#D4AF37)
+          </button>
+          <button class="btn btn-secondary" onclick="app.setAccentTheme('yellow')">
+            <span style="width:14px;height:14px;border-radius:50%;background:#FFB800;display:inline-block;"></span>
+            Performance-Gelb (#FFB800)
+          </button>
+        </div>
+      </div>
+
+      <!-- Dienstleistungskatalog (Montage, Entsorgung, Einlagerung, RDKS etc.) -->
+      <div class="form-section" style="margin-bottom: 18px;">
+        <div class="form-section-title">
+          <span>🔧 Dienstleistungskatalog (für Angebotserstellung)</span>
+          <button class="btn btn-primary btn-sm" onclick="app.openServiceModal()">+ Leistung hinzufügen</button>
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 12px;">
+          Diese Leistungen (Montage, Auswuchten, Entsorgung, Einlagerung, RDKS etc.) lassen sich per Fingertipp in jedes Angebot einfügen:
+        </p>
+        <div id="servicesCatalogContainer"></div>
+      </div>
+
+      <!-- Eigene Firmendaten & YK-Firmenlogo -->
+      <form id="companySettingsForm" class="form-section" style="margin-bottom: 18px;" onsubmit="app.saveCompanySettings(event)">
+        <div class="form-section-title">
+          <span>🏢 Eigene Firmendaten &amp; YK-Logo (für Angebote &amp; Etiketten)</span>
+          <button type="submit" class="btn btn-primary btn-sm">💾 Firmendaten speichern</button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
+          <div class="brand-logo-wrap" style="width: 84px; height: 84px; border-radius: 16px;">
+            <img id="settingsLogoPreview" src="assets/logo.jpg" alt="Firmenlogo Vorschau" />
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <div style="font-weight: 700; font-size: 0.9rem;">Firmenlogo (YK Standardlogo aktiv)</div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <label class="btn btn-secondary btn-sm" style="cursor: pointer;">
+                📷 Eigenes Bild wählen
+                <input type="file" accept="image/*" style="display: none;" onchange="app.onUploadCompanyLogo(event)" />
+              </label>
+              <button type="button" class="btn btn-ghost btn-sm" onclick="app.resetCompanyLogo()">Auf YK-Logo zurücksetzen</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Firmenname / Werkstattname</label>
+            <input type="text" id="compName" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Inhaber / Geschäftsführer</label>
+            <input type="text" id="compOwner" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Straße &amp; Hausnummer</label>
+            <input type="text" id="compStreet" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">PLZ</label>
+            <input type="text" id="compZip" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Ort</label>
+            <input type="text" id="compCity" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Telefon / Mobil</label>
+            <input type="text" id="compPhone" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-Mail</label>
+            <input type="email" id="compEmail" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Webseite</label>
+            <input type="text" id="compWebsite" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Steuernummer</label>
+            <input type="text" id="compTaxNumber" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">USt-IdNr.</label>
+            <input type="text" id="compVatId" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Besteuerungsart (für Angebote)</label>
+            <select id="compTaxMode" class="form-control">
+              <option value="regular">Regelbesteuerung (19 % MwSt. ausweisen)</option>
+              <option value="kleinunternehmer">Kleinunternehmer (§ 19 UStG – ohne MwSt.)</option>
+              <option value="diff">Differenzbesteuerung (§ 25a UStG Gebrauchtteile)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Angebotsnummern-Präfix</label>
+            <input type="text" id="compQuotePrefix" class="form-control" placeholder="ANG-2026-" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Bankname</label>
+            <input type="text" id="compBank" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">IBAN</label>
+            <input type="text" id="compIban" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">BIC</label>
+            <input type="text" id="compBic" class="form-control" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Zahlungsbedingungen / Fußhinweis</label>
+            <input type="text" id="compPaymentTerms" class="form-control" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Standard-Einleitungstext auf Angeboten</label>
+            <textarea id="compQuoteIntro" class="form-control" rows="2"></textarea>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Standard-Schlusstext auf Angeboten</label>
+            <textarea id="compQuoteFooter" class="form-control" rows="2"></textarea>
+          </div>
+        </div>
+        <div style="margin-top: 14px; display: flex; justify-content: flex-end;">
+          <button type="submit" class="btn btn-primary">💾 Firmendaten speichern</button>
+        </div>
+      </form>
+
+      <!-- Backup & Daten-Export -->
+      <div class="form-section">
+        <div class="form-section-title">
+          <span>💾 Daten-Export, Komplett-Backup &amp; Wiederherstellung</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <button class="btn btn-secondary" onclick="app.exportInventoryCSV()">
+            📊 Bestandsliste als CSV (Excel) exportieren
+          </button>
+          <button class="btn btn-secondary" onclick="app.exportJSONBackup()">
+            📦 Komplett-Backup (.json inkl. Fotos &amp; Angebote) sichern
+          </button>
+          <label class="btn btn-secondary" style="cursor: pointer;">
+            📂 Backup-Datei (.json) einspielen
+            <input type="file" accept=".json,application/json" style="display: none;" onchange="app.importJSONBackup(event)" />
+          </label>
+          <button class="btn btn-danger" onclick="app.confirmResetDemoData()">
+            🔄 Beispieldaten neu laden / Zurücksetzen
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       BOTTOM NAVIGATION BAR (5 TABS)
+       ======================================================================== -->
+  <nav class="bottom-nav">
+    <div class="bottom-nav-inner">
+      <button class="nav-tab active" data-tab="inventory" onclick="app.switchTab('inventory')">
+        <svg><use href="#icon-tire"></use></svg>
+        <span>Bestand</span>
+      </button>
+      <button class="nav-tab" data-tab="quotes" onclick="app.switchTab('quotes')">
+        <svg><use href="#icon-quote"></use></svg>
+        <span>Angebote</span>
+        <span class="nav-badge" id="navQuoteBadge" style="display:none;">0</span>
+      </button>
+      <button class="nav-tab" data-tab="customers" onclick="app.switchTab('customers')">
+        <svg><use href="#icon-users"></use></svg>
+        <span>Kunden</span>
+      </button>
+      <button class="nav-tab" data-tab="locations" onclick="app.switchTab('locations')">
+        <svg><use href="#icon-warehouse"></use></svg>
+        <span>Lagerorte</span>
+      </button>
+      <button class="nav-tab" data-tab="settings" onclick="app.switchTab('settings')">
+        <svg><use href="#icon-wrench-gear"></use></svg>
+        <span>Firma &amp; Katalog</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       MODAL 1: ARTIKEL ANLEGEN / BEARBEITEN (REIFEN, FELGEN, KOMPLETTRÄDER)
+       ======================================================================== -->
+  <div id="modal-item" class="modal-backdrop">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <h2 id="itemModalTitle"><svg width="22" height="22"><use href="#icon-tire"></use></svg> Lager-Artikel anlegen</h2>
+        <button class="btn btn-ghost btn-icon" onclick="app.closeModal('modal-item')">✕</button>
+      </div>
+
+      <form id="itemForm" class="modal-body" onsubmit="app.saveItem(event)">
+        <input type="hidden" id="itemId" />
+
+        <!-- Kategorie-Wahl -->
+        <div class="form-group">
+          <label class="form-label">Artikel-Kategorie wählen</label>
+          <div class="filter-scroll">
+            <button type="button" class="chip active" data-formcat="tire" onclick="app.setFormCategory('tire')">
+              <svg><use href="#icon-tire"></use></svg> Reifen
+            </button>
+            <button type="button" class="chip" data-formcat="rim" onclick="app.setFormCategory('rim')">
+              <svg><use href="#icon-rim"></use></svg> Felge
+            </button>
+            <button type="button" class="chip" data-formcat="wheel" onclick="app.setFormCategory('wheel')">
+              <svg><use href="#icon-wheel"></use></svg> Komplettrad (Reifen + Felge)
+            </button>
+            <button type="button" class="chip" data-formcat="accessory" onclick="app.setFormCategory('accessory')">
+              <svg><use href="#icon-wrench-gear"></use></svg> Zubehör / Sonstiges
+            </button>
+          </div>
+        </div>
+
+        <!-- SMART-PARSER SCHNELLEINGABE -->
+        <div class="smart-parser-box">
+          <div class="smart-parser-title">
+            <span>⚡ Smart-Parser Schnelleingabe (automatische Erkennung aller Felder)</span>
+          </div>
+          <div class="smart-parser-row">
+            <input
+              type="text"
+              id="smartParserInput"
+              class="form-control"
+              placeholder="z.B. 225/45 R18 95V XL DOT 3624 Continental  ODER  8.5Jx19 ET35 5x112 66.6"
+            />
+            <button type="button" class="btn btn-primary btn-sm" onclick="app.applySmartParser()">
+              Ausfüllen
+            </button>
+          </div>
+        </div>
+
+        <!-- SEKTION A: REIFENDATEN -->
+        <div id="sectionTireSpecs" class="form-section">
+          <div class="form-section-title">
+            <span>🛞 Reifenspezifikationen (Größe, Traglast, Speed, DOT, Profil)</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Reifenmarke / Hersteller</label>
+              <input type="text" id="itemBrand" list="tireBrandsList" class="form-control" placeholder="z.B. Continental, Michelin…" />
+              <datalist id="tireBrandsList"></datalist>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Modell / Profilname</label>
+              <input type="text" id="itemModel" class="form-control" placeholder="z.B. WinterContact TS 870" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Saison / Typ</label>
+              <select id="itemSeason" class="form-control">
+                <option value="summer">☀️ Sommerreifen</option>
+                <option value="winter">❄️ Winterreifen</option>
+                <option value="allseason">🌦️ Allwetterreifen / Ganzjahr</option>
+                <option value="semislick">🏁 Semi-Slick / Track</option>
+                <option value="offroad">⛰️ Offroad / AT / MT</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Reifenbreite (mm)</label>
+              <input type="number" id="itemTireWidth" class="form-control" placeholder="z.B. 225" step="5" />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','185')">185</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','195')">195</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','205')">205</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','215')">215</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','225')">225</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','235')">235</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','245')">245</span>
+                <span class="preset-pill" onclick="app.setField('itemTireWidth','255')">255</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Querschnitt (%)</label>
+              <input type="number" id="itemTireAspect" class="form-control" placeholder="z.B. 45" step="5" />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','35')">35</span>
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','40')">40</span>
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','45')">45</span>
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','50')">50</span>
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','55')">55</span>
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','60')">60</span>
+                <span class="preset-pill" onclick="app.setField('itemTireAspect','65')">65</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Bauart</label>
+              <select id="itemTireConstruction" class="form-control">
+                <option value="R">R (Radial)</option>
+                <option value="ZR">ZR (Hochgeschw.)</option>
+                <option value="D">D (Diagonal)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Zollgröße (Durchmesser)</label>
+              <input type="number" id="itemTireDiameter" class="form-control" placeholder="z.B. 18" step="1" oninput="app.syncDiameter(this.value, 'tire')" />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','15',true)">15"</span>
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','16',true)">16"</span>
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','17',true)">17"</span>
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','18',true)">18"</span>
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','19',true)">19"</span>
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','20',true)">20"</span>
+                <span class="preset-pill" onclick="app.setField('itemTireDiameter','21',true)">21"</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span>Traglast-Index</span>
+                <span id="loadIndexHint" class="form-hint"></span>
+              </label>
+              <input type="text" id="itemLoadIndex" class="form-control" placeholder="z.B. 91, 94, 98" oninput="app.updateSpecHints()" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span>Geschwindigkeits-Index</span>
+                <span id="speedIndexHint" class="form-hint"></span>
+              </label>
+              <select id="itemSpeedIndex" class="form-control" onchange="app.updateSpecHints()">
+                <option value="">– Wählen –</option>
+                <option value="Q">Q (bis 160 km/h)</option>
+                <option value="T">T (bis 190 km/h)</option>
+                <option value="H">H (bis 210 km/h)</option>
+                <option value="V">V (bis 240 km/h)</option>
+                <option value="W">W (bis 270 km/h)</option>
+                <option value="Y">Y (bis 300 km/h)</option>
+                <option value="(Y)">(Y) (&gt; 300 km/h)</option>
+                <option value="ZR">ZR (&gt; 240 km/h)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <span>DOT (WWJJ)</span>
+                <span id="dotAgeHint" class="form-hint"></span>
+              </label>
+              <input type="text" id="itemDot" class="form-control" maxlength="4" placeholder="z.B. 3624" oninput="app.updateSpecHints()" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">OE-Herstellerkennung</label>
+              <input type="text" id="itemOeKey" class="form-control" placeholder="z.B. MO, AO, *, N0, VW" />
+            </div>
+
+            <!-- Profiltiefe: Einzelwert oder 4er-Satz (VL, VR, HL, HR) -->
+            <div class="form-group full">
+              <div class="form-label">
+                <span>Profiltiefe in mm</span>
+                <label style="font-size:0.75rem; cursor:pointer; display:flex; align-items:center; gap:5px;">
+                  <input type="checkbox" id="itemTreadIndividualToggle" onchange="app.toggleTreadMode(this.checked)" />
+                  4 Einzelwerte (VL / VR / HL / HR) eingeben
+                </label>
+              </div>
+              <div id="treadSingleWrap">
+                <input type="number" id="itemTreadDepth" class="form-control" step="0.1" min="0" max="15" placeholder="z.B. 7.5 mm" />
+              </div>
+              <div id="treadIndividualWrap" class="form-grid" style="display:none; margin-top:6px;">
+                <input type="number" id="itemTreadVL" class="form-control" step="0.1" placeholder="VL (mm)" />
+                <input type="number" id="itemTreadVR" class="form-control" step="0.1" placeholder="VR (mm)" />
+                <input type="number" id="itemTreadHL" class="form-control" step="0.1" placeholder="HL (mm)" />
+                <input type="number" id="itemTreadHR" class="form-control" step="0.1" placeholder="HR (mm)" />
+              </div>
+            </div>
+
+            <!-- Zusatzkennzeichnungen (XL, Runflat, M+S, 3PMSF, FSL, C-Reifen) -->
+            <div class="form-group full">
+              <label class="form-label">Zusatzkennzeichnungen (Mehrfachauswahl per Klick)</label>
+              <div class="filter-scroll" id="tireFlagsRow">
+                <button type="button" class="chip" data-flag="XL" onclick="app.toggleTireFlag('XL')">XL / Verstärkt</button>
+                <button type="button" class="chip" data-flag="Runflat" onclick="app.toggleTireFlag('Runflat')">Runflat (RFT/SSR/ROF)</button>
+                <button type="button" class="chip" data-flag="M+S" onclick="app.toggleTireFlag('M+S')">M+S</button>
+                <button type="button" class="chip" data-flag="3PMSF" onclick="app.toggleTireFlag('3PMSF')">❄️ 3PMSF (Schneeflocke)</button>
+                <button type="button" class="chip" data-flag="FSL" onclick="app.toggleTireFlag('FSL')">FSL / MFS (Felgenschutz)</button>
+                <button type="button" class="chip" data-flag="C-Reifen" onclick="app.toggleTireFlag('C-Reifen')">C-Reifen (Transporter)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEKTION B: FELGENDATEN -->
+        <div id="sectionRimSpecs" class="form-section" style="display:none;">
+          <div class="form-section-title">
+            <span>⚙️ Felgenspezifikationen (Zoll, Breite, ET, Lochkreis, Mittenloch)</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Felgenart / Material</label>
+              <select id="itemRimType" class="form-control">
+                <option value="alu">Alufelge (Leichtmetall)</option>
+                <option value="steel">Stahlfelge</option>
+                <option value="forged">Schmiedefelge (Forged)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Felgenhersteller / OEM</label>
+              <input type="text" id="itemRimBrand" list="rimBrandsList" class="form-control" placeholder="z.B. BBS, Borbet, BMW OEM…" />
+              <datalist id="rimBrandsList"></datalist>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Modell / Styling / Design</label>
+              <input type="text" id="itemRimModel" class="form-control" placeholder="z.B. Styling M791, CH-R…" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">KBA-Nr. / OEM-Teilenummer</label>
+              <input type="text" id="itemKbaNumber" class="form-control" placeholder="z.B. KBA 47692 oder 5G0601025" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Felgenbreite (Maulweite J)</label>
+              <input type="number" id="itemRimWidth" class="form-control" step="0.5" placeholder="z.B. 8.0" />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemRimWidth','6.5')">6.5J</span>
+                <span class="preset-pill" onclick="app.setField('itemRimWidth','7.0')">7.0J</span>
+                <span class="preset-pill" onclick="app.setField('itemRimWidth','7.5')">7.5J</span>
+                <span class="preset-pill" onclick="app.setField('itemRimWidth','8.0')">8.0J</span>
+                <span class="preset-pill" onclick="app.setField('itemRimWidth','8.5')">8.5J</span>
+                <span class="preset-pill" onclick="app.setField('itemRimWidth','9.0')">9.0J</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Felgendurchmesser (Zoll)</label>
+              <input type="number" id="itemRimDiameter" class="form-control" step="1" placeholder="z.B. 18" oninput="app.syncDiameter(this.value, 'rim')" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Einpresstiefe (ET / IS in mm)</label>
+              <input type="number" id="itemRimEt" class="form-control" step="1" placeholder="z.B. 35 oder 45" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Lochkreis (LK / PCD)</label>
+              <input type="text" id="itemRimPcd" class="form-control" placeholder="z.B. 5x112" />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemRimPcd','4x100')">4x100</span>
+                <span class="preset-pill" onclick="app.setField('itemRimPcd','5x100')">5x100</span>
+                <span class="preset-pill" onclick="app.setField('itemRimPcd','5x112')">5x112</span>
+                <span class="preset-pill" onclick="app.setField('itemRimPcd','5x114.3')">5x114.3</span>
+                <span class="preset-pill" onclick="app.setField('itemRimPcd','5x120')">5x120</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mittenloch / Nabe (ML in mm)</label>
+              <input type="text" id="itemRimCenterBore" class="form-control" placeholder="z.B. 66.6 oder 57.1" />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemRimCenterBore','57.1')">57.1</span>
+                <span class="preset-pill" onclick="app.setField('itemRimCenterBore','60.1')">60.1</span>
+                <span class="preset-pill" onclick="app.setField('itemRimCenterBore','63.4')">63.4</span>
+                <span class="preset-pill" onclick="app.setField('itemRimCenterBore','66.6')">66.6</span>
+                <span class="preset-pill" onclick="app.setField('itemRimCenterBore','72.6')">72.6</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Hump / Hornform</label>
+              <select id="itemRimHump" class="form-control">
+                <option value="H2">J / H2 (Standard)</option>
+                <option value="EH2+">J / EH2+ (Runflat-tauglich)</option>
+                <option value="FH">FH (Flat Hump)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Farbe / Oberfläche</label>
+              <input type="text" id="itemRimColor" class="form-control" placeholder="z.B. Schwarz Glanz / Glanzgedreht" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">RDKS / TPMS Sensoren</label>
+              <select id="itemTpmsType" class="form-control">
+                <option value="none">Keine RDKS-Sensoren</option>
+                <option value="active">Aktiv (Funk-Sensoren verbaut)</option>
+                <option value="passive">Passiv / Vorbereitet</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- MISCHBEREIFUNG (VA ≠ HA) SCHALTER -->
+        <div id="sectionStaggered" class="form-section">
+          <div class="form-section-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+            <label style="cursor:pointer; display:flex; align-items:center; gap:8px;">
+              <input type="checkbox" id="itemStaggeredToggle" onchange="app.toggleStaggeredFields(this.checked)" />
+              <span>🔀 Mischbereifung (Hinterachse hat abweichende Reifen-/Felgenmaße)</span>
+            </label>
+          </div>
+          <div id="staggeredFieldsWrap" class="form-grid" style="display:none; margin-top:12px; padding-top:12px; border-top:1px solid var(--border-subtle);">
+            <div class="form-group">
+              <label class="form-label">HA Reifenbreite (mm)</label>
+              <input type="number" id="itemRearTireWidth" class="form-control" placeholder="z.B. 255" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">HA Querschnitt (%)</label>
+              <input type="number" id="itemRearTireAspect" class="form-control" placeholder="z.B. 35" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">HA Zollgröße</label>
+              <input type="number" id="itemRearTireDiameter" class="form-control" placeholder="z.B. 19" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">HA Traglast / Speed</label>
+              <div style="display:flex; gap:5px;">
+                <input type="text" id="itemRearLoadIndex" class="form-control" placeholder="96" />
+                <input type="text" id="itemRearSpeedIndex" class="form-control" placeholder="Y" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">HA Felgenbreite (J)</label>
+              <input type="number" id="itemRearRimWidth" class="form-control" step="0.5" placeholder="z.B. 8.5" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">HA Einpresstiefe (ET)</label>
+              <input type="number" id="itemRearRimEt" class="form-control" placeholder="z.B. 40" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SEKTION C: BESTAND, LAGERORT, ZUSTAND, PREISE & FOTOS -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>📦 Bestand, Lagerort (Halle/Regal/Fach), Zustand &amp; Preis</span>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Interne Artikel-Nr. / SKU</label>
+              <input type="text" id="itemSku" class="form-control" placeholder="Automatisch z.B. YK-R-006" />
+            </div>
+            <div class="form-group" id="customTitleWrap" style="display:none;">
+              <label class="form-label">Artikelbezeichnung (Zubehör)</label>
+              <input type="text" id="itemCustomTitle" class="form-control" placeholder="z.B. Satz RDKS-Sensoren Huf" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Aktueller Bestand (Stück)</label>
+              <input type="number" id="itemQuantity" class="form-control" min="0" value="4" required />
+              <div class="quick-preset-bar">
+                <span class="preset-pill" onclick="app.setField('itemQuantity','1')">1 Stk.</span>
+                <span class="preset-pill" onclick="app.setField('itemQuantity','2')">2 (Paar)</span>
+                <span class="preset-pill" onclick="app.setField('itemQuantity','4')">4 (1 Satz)</span>
+                <span class="preset-pill" onclick="app.setField('itemQuantity','8')">8 (2 Sätze)</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mindestbestand (Warnung)</label>
+              <input type="number" id="itemMinStock" class="form-control" min="0" value="4" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Zustand</label>
+              <select id="itemCondition" class="form-control">
+                <option value="neu">🌟 Neu / Ungefahren</option>
+                <option value="neuwertig">✨ Neuwertig / Demo</option>
+                <option value="gut">👍 Gebraucht (Guter Zustand)</option>
+                <option value="spuren">⚠️ Gebraucht (Kratzer / Spuren)</option>
+                <option value="defekt">❌ Beschädigt / Zu prüfen</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Lager: Halle / Bereich</label>
+              <input type="text" id="itemLocHall" list="hallsList" class="form-control" placeholder="z.B. Halle 1" />
+              <datalist id="hallsList">
+                <option value="Halle 1"></option>
+                <option value="Halle 2"></option>
+                <option value="Kellerlager"></option>
+                <option value="Container A"></option>
+                <option value="Verkaufsraum"></option>
+              </datalist>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Regal / Reihe</label>
+              <input type="text" id="itemLocShelf" class="form-control" placeholder="z.B. Regal A" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Fach / Platz</label>
+              <input type="text" id="itemLocSlot" class="form-control" placeholder="z.B. Fach 04" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Einkaufspreis EK (€/Stk.)</label>
+              <input type="number" id="itemPricePurchase" class="form-control" step="0.01" min="0" placeholder="0.00" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Verkaufspreis VK (€/Stk.)</label>
+              <input type="number" id="itemPriceSale" class="form-control" step="0.01" min="0" placeholder="0.00" />
+            </div>
+
+            <div class="form-group full">
+              <label class="form-label">Passende Fahrzeuge / Zuordnung (optional)</label>
+              <input type="text" id="itemVehicleFitment" class="form-control" placeholder="z.B. VW Golf 7/8, Audi A3, BMW 3er G20 oder Kunden-Kennzeichen" />
+            </div>
+
+            <div class="form-group full">
+              <label class="form-label">Zustandsnotiz / Schäden / Besonderheiten</label>
+              <textarea id="itemDamageNotes" class="form-control" rows="2" placeholder="z.B. Felge VR kleiner Kratzer am Horn, RDKS geprüft…"></textarea>
+            </div>
+
+            <!-- Kamera / Fotos -->
+            <div class="form-group full">
+              <label class="form-label">Fotos (Profil, DOT, Felge, Schäden – bis zu 4 Bilder)</label>
+              <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+                <label class="btn btn-secondary btn-sm" style="cursor:pointer;">
+                  📷 Foto aufnehmen / wählen
+                  <input type="file" accept="image/*" multiple style="display:none;" onchange="app.onAddItemPhotos(event)" />
+                </label>
+                <div id="itemPhotosPreview" class="card-photos-strip"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer" style="margin: 0 -18px -18px;">
+          <button type="button" class="btn btn-ghost" onclick="app.closeModal('modal-item')">Abbrechen</button>
+          <button type="submit" class="btn btn-primary">💾 Artikel im Lager speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: ANGEBOT ERSTELLEN / BEARBEITEN (INKL. DIENSTLEISTUNGEN)
+       ======================================================================== -->
+  <div id="modal-quote" class="modal-backdrop">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <h2 id="quoteModalTitle"><svg width="22" height="22"><use href="#icon-quote"></use></svg> Angebot bearbeiten</h2>
+        <button class="btn btn-ghost btn-icon" onclick="app.closeModal('modal-quote')">✕</button>
+      </div>
+
+      <form id="quoteForm" class="modal-body" onsubmit="app.saveQuote(event)">
+        <input type="hidden" id="quoteId" />
+
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>📋 Dokumentdaten &amp; Kunde</span>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Dokumenttyp</label>
+              <select id="quoteDocType" class="form-control">
+                <option value="Angebot">Angebot</option>
+                <option value="Auftragsbestätigung">Auftragsbestätigung</option>
+                <option value="Einlagerungsschein">Einlagerungsschein</option>
+                <option value="Rechnung">Rechnung</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dokument-Nummer</label>
+              <input type="text" id="quoteNumber" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Status</label>
+              <select id="quoteStatus" class="form-control">
+                <option value="draft">📝 Entwurf</option>
+                <option value="open">📨 Offen / Versendet</option>
+                <option value="accepted">✅ Angenommen</option>
+                <option value="rejected">❌ Abgelehnt</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Datum</label>
+              <input type="date" id="quoteDate" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Gültig bis</label>
+              <input type="date" id="quoteValidUntil" class="form-control" />
+            </div>
+
+            <div class="form-group full">
+              <label class="form-label">
+                <span>Kunde aus Kundenstamm übernehmen</span>
+                <button type="button" class="btn btn-ghost btn-sm" onclick="app.openCustomerModal()">+ Neuer Kunde</button>
+              </label>
+              <select id="quoteCustomerSelect" class="form-control" onchange="app.onSelectQuoteCustomer(this.value)">
+                <option value="">– Kunde wählen oder unten direkt eintragen –</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Kundenname / Firma</label>
+              <input type="text" id="quoteCustName" class="form-control" placeholder="Vor- und Nachname / Firma" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Straße &amp; Hausnr.</label>
+              <input type="text" id="quoteCustStreet" class="form-control" placeholder="Straße" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">PLZ &amp; Ort</label>
+              <input type="text" id="quoteCustZipCity" class="form-control" placeholder="PLZ Ort" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Telefon / E-Mail</label>
+              <input type="text" id="quoteCustPhone" class="form-control" placeholder="Telefonnummer" />
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Fahrzeug &amp; Kennzeichen</label>
+              <input type="text" id="quoteVehicleInfo" class="form-control" placeholder="z.B. BMW 330i · Kennzeichen: M-MS 330" />
+            </div>
+          </div>
+        </div>
+
+        <!-- POSITIONS-BAUKASTEN: LAGERARTIKEL + DIENSTLEISTUNGEN (MONTAGE, ENTSORGUNG, EINLAGERUNG) -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>🔧 Positionen hinzufügen (Lagerbestand &amp; Dienstleistungen)</span>
+          </div>
+
+          <!-- Lagerartikel hinzufügen -->
+          <div style="margin-bottom: 12px;">
+            <label class="form-label" style="margin-bottom: 5px;">📦 Reifen / Felgen / Komplettrad aus Lagerbestand einfügen:</label>
+            <div style="display:flex; gap:8px;">
+              <select id="quoteAddInvSelect" class="form-control" style="flex:1;"></select>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="app.addQuoteInventoryItem()">+ In Angebot</button>
+            </div>
+          </div>
+
+          <!-- Dienstleistungen per Klick einfügen -->
+          <div style="margin-bottom: 12px;">
+            <label class="form-label" style="margin-bottom: 5px;">⚙️ Dienstleistung antippen zum Einfügen (Montage, Wuchten, Entsorgung, Einlagerung):</label>
+            <div id="quoteServicePicker" class="service-Picker-grid"></div>
+          </div>
+
+          <button type="button" class="btn btn-ghost btn-sm" onclick="app.addQuoteCustomItem()">+ Freie Text-/Sonderposition hinzufügen</button>
+        </div>
+
+        <!-- AKTUELLE POSITIONSLISTE IM ANGEBOT -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>📑 Enthaltene Positionen im Angebot</span>
+          </div>
+          <div id="quoteItemsContainer" class="quote-items-list"></div>
+
+          <div class="form-grid" style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-subtle);">
+            <div class="form-group">
+              <label class="form-label">Pauschal-Rabatt (€ Brutto)</label>
+              <input type="number" id="quoteOverallDiscount" class="form-control" step="0.50" min="0" value="0" oninput="app.recalcQuoteTotals()" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Steuerberechnung</label>
+              <select id="quoteTaxMode" class="form-control" onchange="app.recalcQuoteTotals()">
+                <option value="regular">19 % MwSt. ausweisen</option>
+                <option value="kleinunternehmer">Kleinunternehmer (§ 19 UStG)</option>
+                <option value="diff">Differenzbesteuert (§ 25a UStG)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Gesamtsumme</label>
+              <div id="quoteLiveTotalDisplay" style="font-size: 1.3rem; font-weight: 800; color: var(--accent); padding-top: 4px;">0,00 €</div>
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Bemerkung / Terminhinweis auf dem Angebot</label>
+              <textarea id="quoteNotes" class="form-control" rows="2" placeholder="z.B. Inklusive RDKS-Prüfung. Montagetermin nach Absprache."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer" style="margin: 0 -18px -18px;">
+          <button type="button" class="btn btn-ghost" onclick="app.closeModal('modal-quote')">Abbrechen</button>
+          <button type="submit" class="btn btn-primary">💾 Angebot speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 3: KUNDE ANLEGEN / BEARBEITEN (INKL. FAHRZEUGE)
+       ======================================================================== -->
+  <div id="modal-customer" class="modal-backdrop">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <h2 id="customerModalTitle"><svg width="22" height="22"><use href="#icon-users"></use></svg> Kunde anlegen / bearbeiten</h2>
+        <button class="btn btn-ghost btn-icon" onclick="app.closeModal('modal-customer')">✕</button>
+      </div>
+
+      <form id="customerForm" class="modal-body" onsubmit="app.saveCustomer(event)">
+        <input type="hidden" id="custId" />
+
+        <div class="form-section">
+          <div class="form-section-title"><span>👤 Kundenstammdaten</span></div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">Kundennummer</label>
+              <input type="text" id="custNumber" class="form-control" placeholder="z.B. KD-1003" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Kundentyp</label>
+              <select id="custType" class="form-control">
+                <option value="private">Privatkunde</option>
+                <option value="business">Firmenkunde / Gewerbe</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Firmenname (optional bei Gewerbe)</label>
+              <input type="text" id="custCompany" class="form-control" placeholder="z.B. Autohaus Muster GmbH" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Vorname</label>
+              <input type="text" id="custFirstName" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nachname</label>
+              <input type="text" id="custLastName" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Straße &amp; Hausnr.</label>
+              <input type="text" id="custStreet" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">PLZ</label>
+              <input type="text" id="custZip" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Ort</label>
+              <input type="text" id="custCity" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Telefon / Mobil (für Anruf &amp; WhatsApp)</label>
+              <input type="tel" id="custPhone" class="form-control" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">E-Mail</label>
+              <input type="email" id="custEmail" class="form-control" />
+            </div>
+            <div class="form-group full">
+              <label class="form-label">Notizen (z.B. Einlagerungs-Info, Präferenzen)</label>
+              <textarea id="custNotes" class="form-control" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fahrzeuge des Kunden -->
+        <div class="form-section">
+          <div class="form-section-title">
+            <span>🚗 Kundenfahrzeuge (Kennzeichen &amp; Reifengröße)</span>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="app.addCustomerVehicleRow()">+ Fahrzeug hinzufügen</button>
+          </div>
+          <div id="custVehiclesContainer" style="display:flex; flex-direction:column; gap:8px;"></div>
+        </div>
+
+        <div class="modal-footer" style="margin: 0 -18px -18px;">
+          <button type="button" class="btn btn-ghost" onclick="app.closeModal('modal-customer')">Abbrechen</button>
+          <button type="submit" class="btn btn-primary">💾 Kunde speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 4: DIENSTLEISTUNG IM KATALOG ANLEGEN / BEARBEITEN
+       ======================================================================== -->
+  <div id="modal-service" class="modal-backdrop">
+    <div class="modal-sheet" style="max-width: 520px;">
+      <div class="modal-header">
+        <h2>🔧 Dienstleistung bearbeiten</h2>
+        <button class="btn btn-ghost btn-icon" onclick="app.closeModal('modal-service')">✕</button>
+      </div>
+      <form id="serviceForm" class="modal-body" onsubmit="app.saveService(event)">
+        <input type="hidden" id="srvId" />
+        <div class="form-grid">
+          <div class="form-group full">
+            <label class="form-label">Kategorie</label>
+            <select id="srvCategory" class="form-control">
+              <option value="Montage & Wechsel">Montage &amp; Wechsel</option>
+              <option value="Auswuchten & Ventile">Auswuchten &amp; Ventile</option>
+              <option value="Entsorgung">Entsorgung</option>
+              <option value="Einlagerung & Pflege">Einlagerung &amp; Pflege</option>
+              <option value="Reparatur & Sonstiges">Reparatur &amp; Sonstiges</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Bezeichnung der Leistung</label>
+            <input type="text" id="srvTitle" class="form-control" required placeholder="z.B. Reifenmontage & Auswuchten Alufelge" />
+          </div>
+          <div class="form-group full">
+            <label class="form-label">Kurzbeschreibung (erscheint im Angebot)</label>
+            <input type="text" id="srvDesc" class="form-control" placeholder="z.B. inkl. Klebegewichten und Ventil" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Einheit</label>
+            <input type="text" id="srvUnit" class="form-control" value="Stück" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Standard-Menge</label>
+            <input type="number" id="srvDefaultQty" class="form-control" value="4" min="1" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Bruttopreis (€)</label>
+            <input type="number" id="srvPriceGross" class="form-control" step="0.50" min="0" required />
+          </div>
+        </div>
+        <div class="modal-footer" style="margin: 0 -18px -18px;">
+          <button type="button" class="btn btn-ghost" onclick="app.closeModal('modal-service')">Abbrechen</button>
+          <button type="submit" class="btn btn-primary">💾 Speichern</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 5: DIN-A4 DRUCK- & PDF-VORSCHAU (ANGEBOTE & LAGER-ETIKETTEN)
+       ======================================================================== -->
+  <div id="modal-print" class="modal-backdrop">
+    <div class="modal-sheet" style="max-width: 880px;">
+      <div class="modal-header no-print">
+        <h2 id="printModalTitle"><svg width="20" height="20"><use href="#icon-print"></use></svg> Druck- &amp; PDF-Vorschau</h2>
+        <div style="display:flex; gap:8px;">
+          <button class="btn btn-primary btn-sm" onclick="window.print()">
+            <svg><use href="#icon-print"></use></svg> Drucken / Als PDF speichern
+          </button>
+          <button class="btn btn-ghost btn-icon" onclick="app.closeModal('modal-print')">✕</button>
+        </div>
+      </div>
+      <div id="printModalBody" class="modal-body" style="background: #334155;"></div>
+    </div>
+  </div>
+
+  <!-- Toast Benachrichtigungen -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Skripte -->
+  <script src="parser.js"></script>
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
